@@ -1,41 +1,36 @@
-import React, { Fragment } from 'react';
+// import React, { Fragment } from 'react';
+// import Unity, {UnityContext} from "react-unity-webgl";
+
+import React, { useEffect } from "react";
 import { Unity, useUnityContext } from "react-unity-webgl";
 
-
 const MyAvatar = () => {
+  const {
+    unityProvider,
+    UNSAFE__detachAndUnloadImmediate: detachAndUnloadImmediate,
+  } = useUnityContext({
+    loaderUrl: "build/QuickFit2.loader.js",
+    dataUrl: "build/QuickFit2.data",
+    frameworkUrl: "build/QuickFit2.framework.js",
+    codeUrl: "build/QuickFit2.wasm",
+  });
 
-    const { unityProvider, unload } = useUnityContext({
-        loaderUrl: "build/QuickFit2.loader.js",
-        dataUrl: "build/QuickFit2.data",
-        frameworkUrl: "build/QuickFit2.framework.js",
-        codeUrl: "build/QuickFit2.wasm",
+  useEffect(() => {
+    return () => {
+      detachAndUnloadImmediate().catch((reason) => {
+        console.log(reason);
       });
-    
-    async function handleClickBack() {
-        await unload();
-        // Ready to navigate to another page.
-    }
-    return (
-        <Fragment>
-            <Unity unityProvider={unityProvider} style={{ width: 1200, height: 650 }} />
-            <button onClick={handleClickBack}>Press To Stop</button>        
-        </Fragment>
-    );
+    };
+  }, [detachAndUnloadImmediate]);
+
+  return (
+    <div>
+      <Unity
+        style={{ width: "1200px", height: "650px" }}
+        unityProvider={unityProvider}
+      />
+    </div>
+  );
 };
 
-/*
-function MyAvatar() {
-    const { unityProvider } = useUnityContext({
-        loaderUrl: "build/QuickFit2.loader.js",
-        dataUrl: "build/QuickFit2.data",
-        frameworkUrl: "build/QuickFit2.framework.js",
-        codeUrl: "build/QuickFit2.wasm",
-      });    
-    useEffect(function () {
-        Unity.on("quitted", function () {});
-    }, []);
-
-    return <Unity unityProvider={unityProvider} />;
-}
-*/
 export default MyAvatar;
