@@ -8,6 +8,7 @@ import BestSellers from './pages/BestSellers.jsx';
 import MyAvatar from './pages/MyAvatar.jsx';
 import NewArrivals from './pages/NewArrivals.jsx';
 import Sale from './pages/Sale.jsx';
+import Topbar from './components/Topbar';
 
 
 /*
@@ -29,6 +30,7 @@ function App() {
 const App = () => {
   return (
     <BrowserRouter>
+      <Topbar />
       <Sidebar>
         <Routes>
           <Route path="/"element={<Home/>}/>
