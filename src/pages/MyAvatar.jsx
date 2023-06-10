@@ -21,8 +21,9 @@ const MyAvatar = () => {
   }, [detachAndUnloadImmediate]);
 
   return (
-    <div>
+    <div className="unity-container">
       <Unity
+        className="unity-app"
         style={{ width: "1200px", height: "650px" }}
         unityProvider={unityProvider}
       />

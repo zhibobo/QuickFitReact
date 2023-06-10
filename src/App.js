@@ -1,5 +1,4 @@
 import './App.css';
-import { Unity, useUnityContext } from "react-unity-webgl";
 import React from 'react';
 import Sidebar from './components/Sidebar';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
@@ -8,38 +7,44 @@ import BestSellers from './pages/BestSellers.jsx';
 import MyAvatar from './pages/MyAvatar.jsx';
 import NewArrivals from './pages/NewArrivals.jsx';
 import Sale from './pages/Sale.jsx';
-
-
-/*
-function App() {
-
-  const { unityProvider } = useUnityContext({
-    loaderUrl: "build/QuickFit2.loader.js",
-    dataUrl: "build/QuickFit2.data",
-    frameworkUrl: "build/QuickFit2.framework.js",
-    codeUrl: "build/QuickFit2.wasm",
-  });
-
-  return (
-    <Unity unityProvider={unityProvider} style={{ width: 1200, height: 650 }} />
-  );
-}
-*/
+import Login from './pages/Login.jsx';
+import Register from './pages/Register.jsx';
+import MyProfile from './pages/MyProfile.jsx';
+import MerchantLogin from './pages/MerchantLogin.jsx';
+import MerchantRegister from './pages/MerchantRegister.jsx';
+import LoveBonito from './pages/LoveBonito.jsx';
+import Cart from './pages/Cart.jsx';
+import MyMeasurement from './pages/MyMeasurement.jsx';
+import MyPurchase from './pages/MyPurchase.jsx';
+import Topbar from './components/Topbar.jsx';
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <Sidebar>
-        <Routes>
-          <Route path="/"element={<Home/>}/>
-          <Route path="/home"element={<Home/>}/>
-          <Route path="/newarrivals"element={<NewArrivals/>}/>
-          <Route path="/bestsellers"element={<BestSellers/>}/>
-          <Route path="/sale"element={<Sale/>}/>
-          <Route path="/myavatar"element={<MyAvatar/>}/>
-        </Routes>
-      </Sidebar>
-    </BrowserRouter>
+    <>
+      <BrowserRouter>
+        <Topbar>
+        <Sidebar>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/newarrivals" element={<NewArrivals />} />
+            <Route path="/bestsellers" element={<BestSellers />} />
+            <Route path="/sale" element={<Sale />} />
+            <Route path="/myavatar" element={<MyAvatar />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/myprofile" element={<MyProfile />} />
+            <Route path="/merchantlogin" element={<MerchantLogin />} />
+            <Route path="/merchantregister" element={<MerchantRegister />} />
+            <Route path="/lovebonito" element={<LoveBonito />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/mymeasurements" element={<MyMeasurement />} />
+            <Route path="/mypurchase" element={<MyPurchase />} />
+          </Routes>
+        </Sidebar>
+        </Topbar>
+      </BrowserRouter>
+    </>
   );
 };
 

@@ -1,13 +1,16 @@
 import React, { useState } from 'react';
 import {
-    FaTh,
+    FaHome,
     FaBars,
+    FaFire,
+    FaThumbsUp,
+    FaTags,
+    FaStreetView,
     FaUserAlt,
-    FaRegChartBar,
-    FaCommentAlt,
-    FaShoppingBag,
-}from "react-icons/fa";
+    FaTruck,
+} from "react-icons/fa";
 import { NavLink } from 'react-router-dom';
+import logo from "../images/quickfit.png";
 
 const Sidebar = ({children}) => {
     const[isOpen ,setIsOpen] = useState(false);
@@ -16,35 +19,47 @@ const Sidebar = ({children}) => {
         {
             path:"/",
             name:"Home",
-            icon:<FaTh/>
+            icon:<FaHome/>
         },
         {
             path:"/newarrivals",
             name:"New Arrivals",
-            icon:<FaUserAlt/>
+            icon:<FaTags/>
         },
         {
             path:"/bestsellers",
             name:"Best Sellers",
-            icon:<FaRegChartBar/>
+            icon:<FaThumbsUp/>
         },
         {
             path:"/sale",
-            name:"Sale",
-            icon:<FaCommentAlt/>
+            name:"Sales",
+            icon:<FaFire/>
         },
         {
             path:"/myavatar",
             name:"My Avatar",
-            icon:<FaShoppingBag/>
+            icon:<FaStreetView/>
         },
+        /*{
+            path:"/login",
+            name:"User Login",
+            icon:<FaUserAlt/>
+        },
+        {
+            path:"/merchantlogin",
+            name:"Merchant Login",
+            icon:<FaTruck/>
+        },*/
     ]
     return (
         <div className='container'>
-            <div style={{width: isOpen ? "200px" : "50px"}} className="sidebar">
+            <div style={{width: isOpen ? "250px" : "50px"}} className="sidebar">
                 <div className="top_section">
-                    <h1 style={{display: isOpen ? "block" : "none"}} className="logo">Logo</h1>
-                    <div style={{marginLeft: isOpen ? "50px" : "0px"}}className="bars">
+                    {/*<div style={{display: isOpen ? "block" : "none"}} className="logo">
+                        <img src={logo} alt="logo" />
+                    </div>*/}
+                    <div style={{marginLeft: isOpen ? "0px" : "0px"}}className="bars">
                         <FaBars onClick={toggle}/>
                     </div>
                 </div>
