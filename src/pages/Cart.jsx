@@ -15,9 +15,8 @@ const Cart = () => {
                     </div>
                         <div className='item-details'>
                             <div className='name-and-remove'>
-                            <h3>Raegan High Low Hem Shirt</h3>  
-                            <button type='button' className='remove-item'> <FaTrashAlt size={20} />  
-                            </button>
+                                <h3>Raegan High Low Hem Shirt</h3>  
+                                <button type='button' className='remove-item'> <FaTrashAlt size={20} /> </button>  
                             </div>
                             <p className='item-tag'>Shirt</p>
                             <p className='delivery-est'>Delivery Estimation</p>
@@ -51,7 +50,9 @@ const Cart = () => {
                         <Link to='/myavatar'>
                             <button className='avatarbtn' type='button' >Try it on first!</button>
                         </Link>
-                        <button className='checkoutbtn' type='button' >Proceed to Checkout</button>
+                        <Link to='/checkout'>
+                            <button className='checkoutbtn' type='button' >Proceed to Checkout</button>                        
+                        </Link>
                     </div>         
                 </div>
             </div>

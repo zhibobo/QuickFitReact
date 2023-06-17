@@ -16,9 +16,9 @@ const Sale = () => {
             <div className='Allproducts-container'>
                 <Link to="/lovebonito">
                     <div className='Allproduct-card'>
-                        <img src={lovebonitologo} className='Allproduct-logo' />
+                        <img src={lovebonitologo} className='Allproduct-logo' alt='logo' />
                         <div className='Allproduct-imgcontainer'>
-                            <img src={lovebonito2} className='Allproduct-img' />
+                            <img src={lovebonito2} className='Allproduct-img' alt='product' />
                         </div>
                         <p className='Saleproduct-sign'>SALE</p>
                         <p className='Allproduct-name'>Raegan High Low Hem Shirt</p>
@@ -31,9 +31,9 @@ const Sale = () => {
                 </Link>
                 <Link>
                     <div className='Allproduct-card'>
-                        <img src={g2000logo} className='Allproduct-logo' />
+                        <img src={g2000logo} className='Allproduct-logo' alt='logo'/>
                         <div className='Allproduct-imgcontainer'>
-                            <img src={g2000} className='Allproduct-img' />
+                            <img src={g2000} className='Allproduct-img' alt='product'/>
                         </div>
                         <p className='Saleproduct-sign'>SALE</p>
                         <p className='Allproduct-name'>Embroidery Logo Classic Pique Polo</p>
@@ -46,9 +46,9 @@ const Sale = () => {
                 </Link>
                 <Link>
                     <div className='Allproduct-card'>
-                        <img src={zaralogo} className='Allproduct-logo' />
+                        <img src={zaralogo} className='Allproduct-logo' alt='logo'/>
                         <div className='Allproduct-imgcontainer'>
-                            <img src={zara} className='Allproduct-img' />
+                            <img src={zara} className='Allproduct-img' alt='product'/>
                         </div>
                         <p className='Saleproduct-sign'>SALE</p>
                         <p className='Allproduct-name'>Straight Fit Culotte-Style Trousers</p>
@@ -61,9 +61,9 @@ const Sale = () => {
                 </Link>
                 <Link>
                     <div className='Allproduct-card'>
-                        <img src={mangologo} className='Allproduct-logo' />
+                        <img src={mangologo} className='Allproduct-logo' alt='logo'/>
                         <div className='Allproduct-imgcontainer'>
-                            <img src={mango} className='Allproduct-img' />
+                            <img src={mango} className='Allproduct-img' alt='product'/>
                         </div>
                         <p className='Saleproduct-sign'>SALE</p>
                         <p className='Allproduct-name'>Striped Cotton Shirt</p>

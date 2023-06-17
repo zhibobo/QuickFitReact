@@ -17,6 +17,16 @@ import Cart from './pages/Cart.jsx';
 import MyMeasurement from './pages/MyMeasurement.jsx';
 import MyPurchase from './pages/MyPurchase.jsx';
 import Topbar from './components/Topbar.jsx';
+import SellerCentre from './pages/SellerCentre.jsx';
+import SellerMarketingCentre from './pages/SellerMarketingCentre.jsx';
+import SellerProduct from './pages/SellerProduct.jsx';
+import SellerOrder from './pages/SellerOrder.jsx';
+import VideoPlayer from './pages/VideoPlayer.jsx';
+import WishList from './pages/WishList.jsx';
+import Checkout from './pages/Checkout.jsx';
+import Checkout2 from './pages/Checkout2.jsx';
+import Checkout3 from './pages/Checkout3.jsx';
+
 
 const App = () => {
   return (
@@ -40,6 +50,15 @@ const App = () => {
             <Route path="/cart" element={<Cart />} />
             <Route path="/mymeasurements" element={<MyMeasurement />} />
             <Route path="/mypurchase" element={<MyPurchase />} />
+            <Route path="/sellercentre" element={<SellerCentre />} />
+            <Route path="/sellermarketing" element={<SellerMarketingCentre />} />
+            <Route path="/sellerproduct" element={<SellerProduct />} />
+            <Route path="/sellerOrder" element={<SellerOrder />} />
+            <Route path="/videoplayer" element={<VideoPlayer />} />
+            <Route path="/wishlist" element={<WishList />} />
+            <Route path="/checkout" element={<Checkout />} />
+            <Route path="/checkout2" element={<Checkout2 />} />
+            <Route path="/checkout3" element={<Checkout3 />} />
           </Routes>
         </Sidebar>
         </Topbar>

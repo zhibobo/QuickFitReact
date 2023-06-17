@@ -6,7 +6,8 @@ import lb4 from '../images/lbsample/lb2_4.jpg';
 import lb5 from '../images/lbsample/lb2_5.jpg';
 import lb6 from '../images/lbsample/lb2_6.jpg';
 import lb7 from '../images/lbsample/lb2_7.jpg';
-import { FaPlus, FaMinus, FaShoppingBasket } from "react-icons/fa";
+import { FaPlus, FaMinus, FaShoppingBasket, FaCartArrowDown } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 const LoveBonito = () => {
     const [index, setIndex] = useState(0);
@@ -94,7 +95,10 @@ const LoveBonito = () => {
                         </div>
                     </div>
                     <div className='add-to-cart'>
-                        <button className='btn' type='button'><FaShoppingBasket size={20} />   Add to Cart</button>
+                        <button to="/cart" className='btn' type='button'><FaShoppingBasket size={20} />   Add to Cart</button>
+                        <Link to='/checkout'>
+                            <button to="/cart" className='paynowbtn' type='button'><FaCartArrowDown size={20} />   Checkout Now</button>                        
+                        </Link>
                     </div>
                 </div>
             </div>

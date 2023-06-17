@@ -16,7 +16,7 @@ const Home = () => {
                     <Link to='/register'>
                         <button className='btn1' type='button'><FaUserPlus size={20} />     Sign Up Now!</button>
                     </Link>
-                    <Link to=''>
+                    <Link to='/videoplayer'>
                         <button className='btn2' type='button'><FaVideo size={20} />     Learn More</button>
                     </Link>
                 </div>

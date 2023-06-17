@@ -4,9 +4,9 @@ import ProfileSidebar from '../components/ProfileSidebar.jsx';
 const MyPurchase = () => {
     return (
         <>     
-        <div className='myprofile-container' >
+        <div className='mymeas-container' >
             <ProfileSidebar />
-            <h1 className='head'>My Profile</h1>
+            <h1 className='head'>My Purchase</h1>
         </div>
         </>
     );

@@ -4,7 +4,7 @@ import ProfileSidebar from '../components/ProfileSidebar.jsx';
 const MyProfile = () => {
     return (       
         <>     
-        <div className='myprofile-container' >
+        <div className='mymeas-container' >
             <ProfileSidebar />
             <h1 className='head'>My Profile</h1>
         </div>

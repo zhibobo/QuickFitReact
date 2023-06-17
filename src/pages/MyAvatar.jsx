@@ -6,10 +6,10 @@ const MyAvatar = () => {
     unityProvider,
     UNSAFE__detachAndUnloadImmediate: detachAndUnloadImmediate,
   } = useUnityContext({
-    loaderUrl: "build/QuickFit2.loader.js",
-    dataUrl: "build/QuickFit2.data",
-    frameworkUrl: "build/QuickFit2.framework.js",
-    codeUrl: "build/QuickFit2.wasm",
+    loaderUrl: "build2/QuickFitUnityApp.loader.js",
+    dataUrl: "build2/QuickFitUnityApp.data",
+    frameworkUrl: "build2/QuickFitUnityApp.framework.js",
+    codeUrl: "build2/QuickFitUnityApp.wasm",
   });
 
   useEffect(() => {

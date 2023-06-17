@@ -53,7 +53,7 @@ main{
   transition: all 0.5s;
 }
 
-.active{
+.sidebar-active{
   background: lightgray;
   color: black;
 }
@@ -94,6 +94,11 @@ main{
   right: 50px;
 }
 
+.topbar-active{
+  background: white;
+  color: black;
+}
+
 /*-----HOME PAGE-----*/
 
 .header {
@@ -110,7 +115,7 @@ main{
 
 .header-left-side {
   display: flex;
-  padding: 3rem 0 1rem;
+  padding: 1rem 0 1rem;
   flex-direction: column;
   justify-content: space-between;
 }
@@ -162,7 +167,7 @@ main{
 .header-circle .header-img {
   position: relative;
   right: 70px;
-  padding: 70px 0;
+  padding: 20px 0;
 }
 
 /*-----UNITY APP PAGE-----*/
@@ -241,7 +246,7 @@ button{
   line-height: 55px;
   letter-spacing: 0.03em;
   color: #212121;
-  padding: 2rem;
+  padding: 0rem 2rem 2rem;
 }
 
 .Allproduct-card {
@@ -480,6 +485,11 @@ button{
   letter-spacing: 0.1em;
   color: #212121;
 }
+.paynowbtn{
+  font-size: 1rem;
+  width: 100%;
+  background-color:rgb(255, 75, 75);
+}
 
 /*-----CART PAGE-----*/
 
@@ -523,10 +533,10 @@ button{
 .name-and-remove {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 .remove-item {
   position: relative;
-  left: 300px;
   bottom: 20px;
   color: black;
   background-color: white;
@@ -604,6 +614,7 @@ button{
 .checkoutbtn{
   position: relative;
   bottom: 50px;
+  width: 100%;
   padding: 0.5rem;
   font-size: 1.3rem;
 }
@@ -673,4 +684,278 @@ button{
 .measurement-desc {
   display: flex;
   gap: 2rem;
+}
+
+/*-----SELLER HOME PAGE-----*/
+
+.seller-container{
+  position: relative;
+  top: 50px;
+}
+
+.section-head{
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.section-desc{
+  color: rgb(131, 131, 131);
+  font-size: 15px;
+  padding-top: 5px;;
+}
+
+.task-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 4rem;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.task{
+  margin: auto;
+  text-align: center;
+}
+
+.task-num{
+  color: lightskyblue;
+}
+
+.bizinsight{
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+/*-----SELLER PRODUCT-----*/
+
+.shopeeproduct{
+  width: 850px;
+  height: 270px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.product-name{
+  display: flex;
+  flex-direction: row;
+}
+
+.product-desc{ 
+  width: 200px;
+  padding: 1rem;
+  position: relative;
+  text-align: right;
+}
+
+.product-desc-large{ 
+  width: 200px;
+  padding: 1rem;
+  position: relative;
+  text-align: right;
+}
+
+.product-input{
+  width: 500px;
+  height: 20px;
+  font-size: 18px;
+  border: solid rgb(170, 170, 170);
+  border-width: 2px;
+  padding: 0.8rem;
+}
+
+.product-input::placeholder{
+  opacity: 0.5;
+}
+
+.product-input-large{
+  width: 500px;
+  height: 300px;
+  border: solid rgb(170, 170, 170);
+  border-width: 2px;
+  padding: 0.8rem;
+  font-size: 18px;
+  border-radius: 10px;;
+}
+
+.savepublish{
+  float: right;
+  margin-top: 20px;
+  margin-right: 85px;
+  font-size: 16px;
+  padding: 0.7rem 1rem;
+  background-color: rgb(214, 59, 3);
+}
+
+/*------MARKETING PAGE-----*/
+
+.marketing-head{
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+.marketing-subcontainer{
+  display: flex;
+  flex-direction: row;
+}
+
+.marketing-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  padding: 1.5rem 1rem;
+  margin-bottom: 20px;;
+}
+
+.marketing-desc{
+  display: flex;
+  flex-direction: column;
+  max-width: 250px;
+}
+
+.marketing-icon{
+  font-size: 40px;
+  position: relative;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 0.4rem 0.5rem;
+}
+
+.marketing-title{
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.marketing-label{
+  font-size: 14px;
+  font-weight: 500px;
+  color:rgb(150, 150, 150);
+}
+
+/*-----VIDEO PLAYER-----*/
+
+.videoplayer{
+  width: 100px;
+}
+
+/*-----CHECKOUT PAGE1-----*/
+
+.checkout-container{
+  padding: 3rem;
+}
+
+.checkout-subcontainer{
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+.shipping-container{
+  padding: 2rem;
+  border: solid rgb(170, 170, 170);
+  width: 530px;
+  border-width: 2px;
+  margin-left: 30px;
+}
+
+.checkout-title{
+  font-size: 30px;
+}
+
+.checkout-step{
+  font-size: 25px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.info-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.info-name{ 
+  width: 200px;
+  position: relative;
+  text-align: left;
+}
+
+.info-input{
+  width: 500px;
+  height: 20px;
+  font-size: 18px;
+  border: solid rgb(170, 170, 170);
+  border-width: 2px;
+  padding: 0.5rem;
+}
+
+.address-container{
+  display: grid;
+  width: 500px;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 40px;
+}
+
+.info-input-small{
+  width: 220px;
+  height: 20px;
+  font-size: 18px;
+  border: solid rgb(170, 170, 170);
+  border-width: 2px;
+  padding: 0.5rem;
+}
+
+.info-divide{
+  height: 1px;
+  width: 515px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-color: black;
+}
+
+.checkout-summary{
+  padding: 2rem;
+  background: #FBFCFF;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 1.5rem;
+  max-width: 350px;
+}
+
+.checkout-summary div {
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+}
+.checkout-summary .btn {
+  width: 100%;
+}
+
+.paymentbtn{
+  float: right;
+  padding: 0.8rem;
+  font-size: 15px;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+/*-----CHECKOUT PAGE2-----*/
+
+.radiobtn{
+  margin-left: 30px; 
+}
+
+.option{
+  display: flex;
+  flex-direction: row;
+}
+
+.paymentlogo{
+  font-size: 30px;
+}
+
+/*-----CHECKOUT PAGE 3-----*/
+
+.paymentsuccess{
+  margin-left: 30px;
 }

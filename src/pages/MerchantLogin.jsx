@@ -2,6 +2,7 @@ import React ,{ useState, useRef, useEffect }from 'react';
 import { Link } from 'react-router-dom';
 import MyProfile from './MyProfile.jsx';
 import { FaTruck } from 'react-icons/fa';
+import SellerCentre from './SellerCentre.jsx';
 
 const MerchantLogin = (props) => {
     const userRef = useRef();
@@ -31,7 +32,7 @@ const MerchantLogin = (props) => {
     return (
         <>
             {success ? (
-                <MyProfile />
+                <SellerCentre />
             ) : (
                 <div className='auth-form-container'>
                     <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
